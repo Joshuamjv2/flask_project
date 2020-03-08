@@ -1,0 +1,24 @@
+#Courses: put cousers in a set with their correspoinding subjects
+#Points: make a set of how things will be equated
+#Validation make sure everyone gives the right info
+#put the person's info in a set, or array and store it 
+#make history of failed and accepted people
+#name, gender, course of choice 
+#make use of the submit button
+
+Steps:
+1.make available the courses and what it takes to get them
+2.make sense of the marks
+3.we gonna need the data from the user and put validations in place
+4.equate the data with respective expected logic...as per step 2
+5.store the given data at the end
+6.Give feedback according to stored data of the person
+
+Pointers and helpers:
+=====================
+1.Avail courses by both drop down and search and sort of iterating through the list
+2.Suggest things as the user types in a course and they can choose from the suggestion
+
+Add on in the course:
+====================
+Automatically suggest something one can apply for if they can't qualify for a certain course.
