@@ -1,10 +1,11 @@
 #Courses: put cousers in a set with their correspoinding subjects
 #Points: make a set of how things will be equated
 #Validation make sure everyone gives the right info
-#put the person's info in a set, or array and store it 
-#make history of failed and accepted people
-#name, gender, course of choice 
+#put the person's info in a set, or array and store it
+#make history of failed and accepted people in two different sets
+#name, gender, course of choice
 #make use of the submit button
+#put email feature..
 
 Steps:
 1.make available the courses and what it takes to get them
@@ -16,8 +17,12 @@ Steps:
 
 Pointers and helpers:
 =====================
-1.Avail courses by both drop down and search and sort of iterating through the list
-2.Suggest things as the user types in a course and they can choose from the suggestion
+1.Avail courses by both drop down and search and sort of iterating through the list.
+2.Suggest things as the user types in a course and they can choose from the suggestion.
+3.Should automatically complete other tabs when user puts there score
+ in correspondence to their mark.eg A for Math should be 6 for points or 1 for gp should automatically be 1 point.
+4.Should easily be able to add as many courses as I want..just create the flow of the program
+and everythimg else works on its own.
 
 Add on in the course:
 ====================
