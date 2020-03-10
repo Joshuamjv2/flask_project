@@ -1,0 +1,22 @@
+Expected from applicant
+=======================
+1.One must provide a name.
+2.One must provide their gender.
+3.One must provide the choice of course they want.
+4.One must provide the subjects they did in A'level and their scores respectively.
+
+Expected from program
+=====================
+1.Must make sure applicant provides the right info.
+2.Must print out the info from applicant in a table.
+3.Must evaluate total points.
+4.Must evaluate total weights according to the different courses.
+5.Must qualify or disqualify applicant by;
+    -total weights
+    -the subjects the applicant did
+6.Should give applicant alternate courses basing on their input.
+7.Should then store all the applicant info and outcomes in a list of dictionaries.
+8.Should have students choose if they want to do any of the recommended courses.
+9.Should also organise a list of qualified students and their respective courses.
+10.Should also organise a list of recommended stuudents who make the cut for some other courses.
+11.Should add students who choose recommended courses to list in 9.
