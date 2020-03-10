@@ -27,3 +27,10 @@ and everythimg else works on its own.
 Add on in the course:
 ====================
 Automatically suggest something one can apply for if they can't qualify for a certain course.
+Automatically arrange subjects in a responsible format
+
+9/3/2020 Andela teenCode:
+========================
+-sets also for data collection
+-every university has its own weight
+-plan to use .append for more the temporary databse
