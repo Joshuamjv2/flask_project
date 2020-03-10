@@ -27,6 +27,8 @@ store_details = {'name: ':'Joshua Muwanguzi',
                 'Total weights: ':45,
                 'Qualified: ':'YES'}
 
+Qualified_students = {'Name':'CourseName'}
+
 print(store_details)
 for i in store_details:
     print(i)

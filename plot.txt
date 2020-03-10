@@ -34,3 +34,4 @@ Automatically arrange subjects in a responsible format
 -sets also for data collection
 -every university has its own weight
 -plan to use .append for more the temporary databse
+-automatically redirect student to the possible or acceptable course
