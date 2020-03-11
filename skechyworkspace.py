@@ -3,10 +3,24 @@
 #name = input('Course: ')
 #done_subjects = input('Subjects)
 #grades = input('GRADES')
-
+#subsidiary and gp
+gp = ''
+sub_mark = ''
 #course = input('Course: ')
 
+#total points initiator
+gp  = int(gp)
+sub_mark = int(sub_mark)
+
+gp_point = 0
+gender_point = 0
+sub_point = 0
+
+
+
 grading = {'A':6, 'B':5, 'C':4, 'D':3, 'E':2, 'O':1, 'F':0}
+
+
 
 #Dealing with courses and subjects
 courses = ['Bsc. Engineering', 'Bsc. Medicine', 'Bsc. Law', 'Bsc. Computer Science', 'Bsc. Econ']
@@ -29,6 +43,3 @@ store_details = {'name: ':'Joshua Muwanguzi',
 
 Qualified_students = {'Name':'CourseName'}
 
-print(store_details)
-for i in store_details:
-    print(i)

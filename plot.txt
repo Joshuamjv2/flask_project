@@ -35,3 +35,9 @@ Automatically arrange subjects in a responsible format
 -every university has its own weight
 -plan to use .append for more the temporary databse
 -automatically redirect student to the possible or acceptable course
+
+
+Research questions
+==================
+1.Can I define morethan one list index in a variable
+2.How do I deal with python user input using jinja2
