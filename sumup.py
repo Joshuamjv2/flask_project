@@ -51,6 +51,7 @@ for subject in subjects:
     if subject in course_subjects:
         considered_subjects.append(subject)
 
+#not qualified due to less subjects for applied course
 while len(considered_subjects) < 2:
     print(f'''Sorry but you did not do the necessary 2 subjects required for this course.
     You can check and see which courses contain your subjects
