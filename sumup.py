@@ -1,5 +1,14 @@
 import sys
 #input Form for the user
+courses = ['Bsc. Engineering', 'Bsc. Medicine', 'Bsc. Law', 'Bsc. Computer Science', 'Bsc. Econ']
+
+subjects_for_courses = {courses[0]:['Physics', 'Chemistry', 'Biology', 'Math'],
+                        courses[1]:['Physics', 'Chemistry', 'Biology', 'Math', 'Literature'],
+                        courses[2]:['History', 'Chemistry', 'Biology', 'Math', 'ICT', 'Geography', 'Literature', 'History'],
+                        courses[3]:['Math', 'Physics', 'Geography', 'Biology', 'ICT', 'Chemistry', 'Music'],
+                        courses[4]:['Math', 'Physics', 'Geography', 'Biology', 'ICT', 'Chemistry']}
+weights_for_courses = {courses[0]:36, courses[1]:50, courses[2]:45, courses[3]:48, courses[4]:45}
+
 applicant_name = input('Name: ')
 gender = input('Gender: ').upper()
 while gender != 'm'.upper() and gender != 'male'.upper() and gender != 'f'.upper() and gender != 'female'.upper():
@@ -10,14 +19,7 @@ while gender != 'm'.upper() and gender != 'male'.upper() and gender != 'f'.upper
     gender = input('Gender: ')
 
 print('Please check for the course you would like to apply for.')
-courses = ['Bsc. Engineering', 'Bsc. Medicine', 'Bsc. Law', 'Bsc. Computer Science', 'Bsc. Econ']
 
-subjects_for_courses = {courses[0]:['Physics', 'Chemistry', 'Biology', 'Math'],
-                        courses[1]:['Physics', 'Chemistry', 'Biology', 'Math', 'Literature'],
-                        courses[2]:['History', 'Chemistry', 'Biology', 'Math', 'ICT', 'Geography', 'Literature', 'History'],
-                        courses[3]:['Math', 'Physics', 'Geography', 'Biology', 'ICT', 'Chemistry', 'Music'],
-                        courses[4]:['Math', 'Physics', 'Geography', 'Biology', 'ICT', 'Chemistry']}
-weights_for_courses = {courses[0]:36, courses[1]:50, courses[2]:45, courses[3]:48, courses[4]:45}
 
 print('We offer the following courses: ')
 
@@ -35,34 +37,36 @@ Hello {applicant_name}, thanks for cosidering to apply for {course_choice} at Ma
 Plese provide the required information as requested below;''')
 #Validation of prefered course: course must be present for the university
 #subjects done in A level-subsidiary
-subjects = input('UACE main 3: ').split( )
+subjects = input('UACE principal subjects: ').split( )
 while len(subjects) != 3:
     print('Your are required to provide the major 3 subjects without subsidiary')
-    subjects = input('UACE main 3(please insert a space between the subjects): ').split( )
+    subjects = input('UACE principals(please insert a space between the subjects): ').split( )
 
 #subjects validation: must have done 2+ subjects to qualify for a ceratin course
 course_subjects = []
 for i in subjects_for_courses:
     course_subjects = subjects_for_courses.get(course_choice)
+print(course_subjects)
 
-considered_subjects = []
+principals = []
 
 for subject in subjects:
     if subject in course_subjects:
-        considered_subjects.append(subject)
+        principals.append(subject)
+#print(principals)
 
-#not qualified due to less subjects for applied course
-while len(considered_subjects) < 2:
+#if not qualified due to less subjects for applied course
+while len(principals) < 2:
     print(f'''Sorry but you did not do the necessary 2 subjects required for this course.
-    You can check and see which courses contain your subjects
-    if you consider trying for another course.
+You can check and see which courses contain your subjects
+if you consider trying for another course.
         ''')
     check_courses = input(f'''To check courses, type y or ok and press enter.
-                        If not interested, just press enter to exit. ''')
+If not interested, just press enter to exit. ''')
     if check_courses == 'y' or check_courses == 'ok':
         done_deal = input(f'''{subjects_for_courses}
-            If you have decided on your suitable course, type yes and press enter.
-            If not, just press enter to exit. ''')
+If you have decided on your suitable course, type yes and press enter.
+If not, just press enter to exit. ''')
         if done_deal == 'yes':
             print('Ok try again.')
         else:
@@ -77,10 +81,11 @@ while len(considered_subjects) < 2:
     while len(subjects) != 3:
         print('Your are required to provide the major 3 subjects without subsidiary')
         subjects = input('UACE main 3(please insert a space between the subjects): ').split( )
-    considered_subjects = []
+    principals = []
     for subject in subjects:
         if subject in course_subjects:
-            considered_subjects.append(subject)
+            print (subject)
+
 
 
 #while len(subject) != 3:
@@ -126,12 +131,12 @@ for ch in marks:
 a = int(output[0])
 b = int(output[1])
 c = int(output[2])
+subject_score_map = {subjects[0]:a, subjects[1]:b, subjects[2]:c}
 
 Total_points = a + b + c + gp_point + sub_point + gender_point
 Total_points = float(Total_points)
 
-#Dealong with weights
-#two principal subjects for a course
+
 
 
 

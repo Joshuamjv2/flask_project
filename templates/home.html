@@ -4,44 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-</head>
-<body>
-    <div <div class="container-fluid">
-    <h2>UACE 2020 Results here</h2>
-    <form action="#" method="POST">
-        <h3>Name: <input type="text"></h3>
-        <h3>Course: <input type="text"></h3>
-    <table>
+<body <div class="card-group text">
+    
+</div>
+    <br>
+    <div class="container" <i class="fa fa-text-height" aria-hidden="true"></i>
+    <h2>Makerere Universitey</h2>
+    <form action="/result" method="POST">
+        <div class="form-group">
+            <h4><label for="formGroupExampleInput">Applicant Name:</label></h4>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name" name="name">
+        </div>
+        <!-- <h4><label for="formGroupExampleInput">Gender:</label></h4>
+        <div class="form-check form-check-inline" <i class="fa fa-genderless" aria-hidden="true"></i>
+            <input id="my-input" class="form-check-input" type="checkbox" name="" value="true">
+            <label for="my-input" class="form-check-label">Male</label>
+        </div>
+        <div class="form-check form-check-inline" <i class="fa fa-genderless" aria-hidden="true"></i>
+            <input id="my-input" class="form-check-input" type="checkbox" name="" value="true">
+            <label for="my-input" class="form-check-label">Female</label> -->
+        <!-- </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-8 col-md-4">
+                <label class="text-muted">Select your gender:</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="gender3">Gender</label>
+                    </div>
+                    <select class="custom-select" id="gender3" name="gender">
+                    <!-- <input type="text" name="gender"> -->
+                    <option selected disabled hidden class="text-muted">Choose...</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Other</option>
+                    </select>
+        </div>
+        <br>
+        <label><strong>Choose Course: </strong></label>
+
+            <div class="form-group">
+            <select id="my-select" class="form-control" name="course_choice">
+            <option value="" disabled selected hidden class="text-muted">Course</option>
+            {% for i in courses %}
+            <option value="courses" name = 'got'>{{i}}</option>
+            {% endfor %}
+            </select>
+            </div>
+
+        <hr>
+        <p>Please provide your UACE results in the form below</p>
+        <h4>Principals</h4>
+    <table class="<i class="fas fa-tablet-alt    "></i>
         <tr>
             <th>Subject</th>
             <th>Score</th>
         <!-- <th>Points</th>-->
         </tr>
         <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td>
+                <div class="form-group">
+                <select id="my-select" class="form-control" name="principal1">
+                <option value=""disabled selected hidden class="text-muted">Principal 1</option>
+                {% for i in subjects_for_courses[course_choice] %}
+                <option>{{ i }}</option>
+                {% endfor %}
+                </select>
+                </div>
+            </td>
+            <td>
+            <div class="form-group">
+                <select id="my-select" class="form-control" name="p1score">
+                <option value="" disabled selected hidden class="text-muted">score</option>
+                {% for i in pscores %}
+                <option value="">{{ i }}</option>
+                {% endfor %}
+                </select>
+            </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="form-group">
+                <select id="my-select" class="form-control" name="principal2">
+                <option value="" disabled selected hidden class="text-muted">Principal2</option>
+                </select>
+                </div>
+            </td>
+            <td>
+            <div class="form-group">
+                <select id="my-select" class="form-control" name="p2score">
+                <option value="" disabled selected hidden class="text-muted">score</option>
+                </select>
+            </div>
+            </td>
         </tr>
         <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td>
+                <div class="form-group">
+                <select id="my-select" class="form-control" name="principal3">
+                <option value="" disabled selected hidden class="text-muted">Principal3</option>
+                </select>
+                </div>
+            </td>
+            <td>
+            <div class="form-group">
+                <select id="my-select" class="form-control" name="p3score">
+                <option value="" disabled selected hidden class="text-muted">score</option>
+                </select>
+            </div>
+            </td>
+        </tr>
+
+        <br>
+    </table>
+    <br>
+    <h4>Subsidiaries</h4>
+
+    <table class="<i class="fas fa-tablet-alt    "></i>
+        <tr>
+            <th>Subject</th>
+            <th>Score</th>
+        <!-- <th>Points</th>-->
         </tr>
         <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td>
+                <div class="form-group">
+                <select id="my-select" class="form-control" name="subsidiary">
+                <option value="" disabled selected hidden class="text-muted">Subsidiary</option>
+                {% for s in subs %}
+                <option value="">{{s}}</option>
+                {% endfor %}
+                </select>
+                </div>
+            </td>
+            <td>
+            <div class="form-group">
+                <select id="my-select" class="form-control" name="subsidiary_score">
+                <option value="" disabled selected hidden class="text-muted">score</option>
+                {% for i in range(1, 10) %}
+                <option value="">{{i}}</option>
+                {%endfor%}
+                </select>
+            </div>
+            </td>
         </tr>
+
         <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td>
+                <div class="form-group">
+                <select id="my-select" class="form-control" name="gp">
+                <option selected hidden>General Paper</option>
+                </select>
+                </div>
+            </td>
+            <td>
+            <div class="form-group">
+                <select id="my-select" class="form-control" name="gp_score">
+                <option value="" disabled selected hidden class="text-muted">score</option>
+                {% for i in range(1, 10) %}
+                <option value="">{{i}}</option>
+                {%endfor%}
+                </select>
+            </div>
+            </td>
         </tr>
     </table>
-    </form>
     <br>
-    <button type="submit">submit</button>
+    <button type="submit" <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- <select class="custom-select">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select> -->
+    </form>
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
