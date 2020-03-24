@@ -8,9 +8,21 @@
 <body>
     <ul>
 <!-- Just testing here -->
-        <li>Your course is {{course_choice}}</l
-        
-        <li>Hey {{ p1score }}</li>
+<td>
+    <div class="form-group">
+    <select id="my-select" class="form-control" name="principal1">
+    <option value="Pricipal1"disabled selected hidden class="text-muted">Principal 1</option>
+    {% for i in subjects_for_courses[course_choice] %}
+    <option value="{{i}}">{{ i }}</option>
+    {% endfor %}
+    </select>
+    </div>
+</td>
+        <li>Your course is {{course_choice}}</li>
+        {% for i in subjects_for_courses[course_choice] %}
+        <li>{{i}}</li>
+        {% endfor %}
+        <li>Hey you got{{ p1score }}</li>
         <li>{{ gp }}</li>
         <li>Hello {{ name }}</li>
         <li>Hello {{ subsidiary }}</li>

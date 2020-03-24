@@ -16,7 +16,7 @@ def home():
     pscores = ['A', 'B', 'C', 'D', 'E', 'O', 'F']
     grading = {'A':6, 'B':5, 'C':4, 'D':3, 'E':2, 'O':1, 'F':0}
     weights_for_courses = {courses[0]:36, courses[1]:50, courses[2]:45, courses[3]:48, courses[4]:45}
-    _gender = ['Male', 'Female']
+    applicant_gender = ['Male', 'Female']
     course_choice = request.form.getlist('course_choice')
     # got = request.form.get('got')
 
@@ -24,8 +24,7 @@ def home():
     # for i in subjects_for_courses:
     #     course_subjects = subjects_for_courses.get(course_choice)
         # return course_subjects
-    return render_template('home.html', subs = subs, _gender = _gender, course_choice = course_choice, courses = courses, subjects_for_courses = subjects_for_courses, pscores = pscores)
-
+    return render_template('home.html', subs = subs, applicant_gender = applicant_gender, course_choice = course_choice, courses = courses, subjects_for_courses = subjects_for_courses, pscores = pscores)
 
 
 @app.route('/result', methods = ['POST', 'GET'])
@@ -45,6 +44,7 @@ def result():
     # principal3 = request.form.get('principal_3')
     # subsidiary = request.form.get('subsidiary')
     gp = request.form.get('gp')
+    # return course_choice
     # final = {principal_1:'principal_1', principal_2:'principal_2', principal_3:'principal_3', subsidiary:'subsidiary', general_paper:'general_paper'}
     #ps = {principal_1:'principal_1'}
     # return render_template('result.html', form  = 'form')

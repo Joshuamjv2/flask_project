@@ -13,7 +13,7 @@
     <div class="container" <i class="fa fa-text-height" aria-hidden="true"></i>
     <h2>Makerere Universitey</h2>
 
-    <form action="/result" method="POST" method="GET">
+    <form action="/result" method="POST">
         <div class="form-group">
             <h4><label for="formGroupExampleInput">Applicant Name:</label></h4>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name" name="name">
@@ -38,8 +38,8 @@
                     <select class="custom-select" id="gender3" name="gender">
                     <!-- <input type="text" name="gender"> -->
                     <option selected disabled hidden class="text-muted">Choose...</option>
-                    {% for i in _gender %}
-                    <option value="">{{ i }}</option>
+                    {% for i in applicant_gender %}
+                    <option value="{{i}}">{{ i }}</option>
                     {% endfor %}
                     </select>
         </div>
@@ -47,7 +47,7 @@
         <label><strong>Choose Course: </strong></label>
 
             <div class="form-group">
-            <select id="my-select" class="form-control" name="">
+            <select id="my-select" class="form-control" name="course_choice">
             <option value="" disabled selected hidden class="text-muted">Course</option>
             {% for i in subjects_for_courses %}
             <!-- {% set course_choice  = i %} -->
@@ -69,10 +69,10 @@
             <td>
                 <div class="form-group">
                 <select id="my-select" class="form-control" name="principal1">
-                <option value=""disabled selected hidden class="text-muted">Principal 1</option>
-                <!-- {% for i in subjects_for_courses[course_choice] %} -->
-                <option value="{{subjects_for_courses[course_choice]}}">{{ subjects_for_courses[course_choice] }}</option>
-                {% endfor %} -->
+                <option value="Pricipal 1"disabled selected hidden class="text-muted">Principal 1</option>
+                {% for i in subjects_for_courses[course_choice] %}
+                <option value="{{i}}">{{ i }}</option>
+                {% endfor %}
                 </select>
                 </div>
             </td>
@@ -81,7 +81,7 @@
                 <select id="my-select" class="form-control" name="p1score">
                 <option value="" disabled selected hidden class="text-muted">score</option>
                 {% for i in pscores %}
-                <option value="">{{ i }}</option>
+                <option value="{{i}}">{{ i }}</option>
                 {% endfor %}
                 </select>
             </div>
